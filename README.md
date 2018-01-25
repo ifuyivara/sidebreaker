@@ -33,7 +33,7 @@ You can create a configuration file in the same folder as the sidebreaker and in
 		},
 		{
 			"host": "slowservice.com",
-			"breakType": "consecutive",
+			"breakType": "threshold",
 			"timeout": 5000,
 			"threshold": 50
 		},
