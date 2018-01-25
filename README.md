@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ifuyivara/sidebreaker.svg?branch=master)](https://travis-ci.org/ifuyivara/sidebreaker)
+
 # Introduction
 This is a very simple sidecar circuit breaker written in Go. It is intended to be deployed next to an application that makes HTTP calls to external services and act as a proxy monitoring the error rates of each service and tripping a circuit breaker when needed.
 
