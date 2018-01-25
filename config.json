@@ -1,0 +1,24 @@
+{
+	"port": 3129,
+	"verbose": true,
+	"hosts": [
+			{
+					"host": "google.com",
+					"breakType": "consecutive",
+					"timeout": 1000,
+					"threshold": 10
+			},
+			{
+					"host": "slowservice.com",
+					"breakType": "consecutive",
+					"timeout": 5000,
+					"threshold": 50
+			},
+			{
+					"host": "external.service.com",
+					"breakType": "rate",
+					"timeout": 8000,
+					"threshold": 0.85
+			}
+	]
+}
