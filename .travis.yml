@@ -4,7 +4,8 @@ go:
 
 install:
  - "go get -d -v ./..."
- - "go build -v ./..."
+ - "GOOS=windows GOARCH=amd64 go build -v ./..."
+ - "GOOS=linux GOARCH=amd64 go build -v ./..."
 
 before_deploy:
   # Set up git user name and tag this commit
@@ -15,5 +16,7 @@ before_deploy:
 deploy:
  provider: releases
  api_key: $GITHUB_TOKEN
- file: "sidebreaker"
+ file: 
+  - "sidebreaker"
+  - "sidebreaker.exe"
  skip_cleanup: true
