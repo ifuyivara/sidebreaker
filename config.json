@@ -20,5 +20,6 @@
 					"timeout": 8000,
 					"threshold": 0.85
 			}
-	]
+
+		]
 }
