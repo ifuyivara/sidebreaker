@@ -24,34 +24,33 @@ You can create a configuration file in the same folder as the sidebreaker and in
 
 ```javascript
 {
-	"port": 3129,
-	"verbose": true,
-	"hosts": [
-		{
-			"host": "google.com",
-			"breakType": "consecutive",
-			"timeout": 1000,
-			"threshold": 10
-		},
-		{
-			"host": "slowservice.com",
-			"breakType": "threshold",
-			"timeout": 5000,
-			"threshold": 50
-		},
-		{
-			"host": "external.service.com",
-			"breakType": "rate",
-			"timeout": 8000,
-			"threshold": 0.85
-		}
-	]
+  "port": 3129,
+  "verbose": true,
+  "hosts": [
+  {
+    "host": "google.com",
+    "breakType": "consecutive",
+    "timeout": 1000,
+    "threshold": 10
+  },
+  {
+    "host": "slowservice.com",
+    "breakType": "threshold",
+    "timeout": 5000,
+    "threshold": 50
+  },
+  {
+    "host": "external.service.com",
+    "breakType": "rate",
+    "timeout": 8000,
+    "threshold": 0.85
+  }]
 }
 ```
 
 You can indicate 3 types of circuit breaker: consecutive, threshold and rate. The threshold for the rate circuit breaker is a double indicating the percentage per 100 requests before the circuit breaker trips. (i.e. 0.85 if you want 85%).
 Once you have your configuration file in the same folder as your sidebreaker you can just start the application normally
 
-`> sidebreaker.exe` or `$ sidebreaker` in linux
+run `> sidebreaker.exe` on windows or `$ sidebreaker` in linux
 
 The application will log to stdout.
