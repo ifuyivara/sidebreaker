@@ -4,8 +4,9 @@ go:
 
 install:
  - "go get -d -v ./..."
- - "GOOS=windows GOARCH=amd64 go build -v ./..."
- - "GOOS=linux GOARCH=amd64 go build -v ./..."
+ - "GOOS=windows GOARCH=amd64 go build -o sidebreaker-win-amd64.exe -v ./..."
+ - "GOOS=linux GOARCH=arm go build -o sidebreaker-linux-amd64 -v ./..."
+ - "GOOS=darwin GOARCH=amd64 go build -o sidebreaker-darwin-amd64 -v ./..."
 
 before_deploy:
   # Set up git user name and tag this commit
@@ -17,6 +18,7 @@ deploy:
  provider: releases
  api_key: $GITHUB_TOKEN
  file: 
-  - "sidebreaker"
-  - "sidebreaker.exe"
+  - "sidebreaker-linux-amd64"
+  - "sidebreaker-win-amd64.exe"
+  - "sidebreaker-darwin-amd64"
  skip_cleanup: true

@@ -43,12 +43,12 @@ You can create a configuration file in the same folder as the sidebreaker and in
     "host": "external.service.com",
     "breakType": "rate",
     "timeout": 8000,
-    "threshold": 0.85
+    "threshold": 85
   }]
 }
 ```
 
-You can indicate 3 types of circuit breaker: consecutive, threshold and rate. The threshold for the rate circuit breaker is a double indicating the percentage per 100 requests before the circuit breaker trips. (i.e. 0.85 if you want 85%).
+You can indicate 3 types of circuit breaker: consecutive, threshold and rate. The threshold for the rate circuit breaker is an int indicating the percentage per 100 requests before the circuit breaker trips. (i.e. 85 if you want 85%).
 Once you have your configuration file in the same folder as your sidebreaker you can just start the application normally
 
 run `> sidebreaker.exe` on windows or `$ sidebreaker` in linux

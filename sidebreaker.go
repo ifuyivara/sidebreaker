@@ -68,7 +68,7 @@ func main() {
 			breaker = circuit.NewThresholdBreaker(v.Threshold)
 			break
 		case "rate":
-			breaker = circuit.NewRateBreaker(v.Rate, 100)
+			breaker = circuit.NewRateBreaker(v.Rate/100, 100)
 			break
 		default:
 			breaker = circuit.NewConsecutiveBreaker(5)
