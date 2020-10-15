@@ -54,3 +54,6 @@ Once you have your configuration file in the same folder as your sidebreaker you
 run `> sidebreaker.exe` on windows or `$ sidebreaker` in linux
 
 The application will log to stdout.
+
+## VSCode DevContainer
+A devcontainer.json is included if you are using vscode you can launch the project that way. Be sure to add port forward to the config based on what port you configure the app to use.
